@@ -2,10 +2,7 @@
 
 pipeline {
 
-    agent any{
-        triggers {
-    githubPush()
-  }
+    agent {
         docker {
             image 'node'
             args '-u root'
