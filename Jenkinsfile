@@ -3,14 +3,15 @@
 pipeline {
 
     agent {
+        triggers {
+    githubPush()
+  }
         docker {
             image 'node'
             args '-u root'
         }
-    }
-    triggers {
-    githubPush()
-  }
+    
+    
 
     stages {
         stage('Build') {
@@ -26,4 +27,5 @@ pipeline {
             }
         }
     }
+}
 }
