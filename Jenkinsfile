@@ -10,7 +10,7 @@ pipeline {
             image 'node'
             args '-u root'
         }
-    
+    }  
     
 
     stages {
@@ -28,4 +28,4 @@ pipeline {
         }
     }
 }
-}
+
