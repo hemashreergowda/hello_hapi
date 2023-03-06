@@ -8,6 +8,9 @@ pipeline {
             args '-u root'
         }
     }
+    triggers {
+    githubPush()
+  }
 
     stages {
         stage('Build') {
